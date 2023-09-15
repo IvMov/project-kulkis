@@ -1,1 +1,18 @@
+server:
+  port: 8761
 
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: eureka-service
+          uri: lb://service
+          predicates:
+            - Path=/api/**
+          filters:
+            - RewritePath=/api/(?<path>.*), /$\{path}
