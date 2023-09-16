@@ -4,6 +4,10 @@ server:
 spring:
   application:
     name: user-service
+  data:
+    mongodb:
+      database: kulkis-users
+      uri: ENC(LzQu/QYwp07McNpShbzQsfmIR27AkGwuKiZJYVH6ytv1kYGhqOlr3ElMCCBl7hm6/x+9QRcN/8UmO0eFTN7RmoKBBdBWlbr7w93zxUmpxX978ZbUZQzjpQ==)
   cloud:
     gateway:
       discovery:
@@ -15,3 +19,8 @@ eureka:
   client:
     service-url:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+
+jasypt:
+  encryptor:
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
+    algorithm: PBEWithMD5AndDES
