@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'home.kulkis.user-service' is invalid and this project uses 'home.kulkis.userservice' instead.
+* The original package name 'home.kulkis.userDetails-service' is invalid and this project uses 'home.kulkis.userservice' instead.
 
 # Getting Started
 
