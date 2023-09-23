@@ -9,6 +9,17 @@ spring:
       uuid-representation: standard
       database: kulkis-users
       uri: ENC(LzQu/QYwp07McNpShbzQsfmIR27AkGwuKiZJYVH6ytv1kYGhqOlr3ElMCCBl7hm6/x+9QRcN/8UmO0eFTN7RmoKBBdBWlbr7w93zxUmpxX978ZbUZQzjpQ==)
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: ENC(t32PEd4Ac2OC0+2tNKkDACAlE24Xfkw8VigTiegj5vTepkmbN8XOhua4o6r8pTZnXM8gQUORdhbZzY8DBN0gZHW4WOWCZ4y6uDs7qtKxxHeSqqlrL5Qzkg==)
+            clientSecret: ENC(Poo+ja/0XyDkYdr3Lwj0cplcm7fAXXpiPp6g8WHWtUI0i0qx0263l+JhJtrXg72x)
+            scope:
+              - email
+              - profile
+
 #  cloud:
 #    gateway:
 #      discovery:

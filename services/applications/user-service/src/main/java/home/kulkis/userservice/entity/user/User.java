@@ -1,6 +1,7 @@
 package home.kulkis.userservice.entity.user;
 
 import home.kulkis.userservice.entity.BaseEntity;
+import home.kulkis.userservice.enums.TokenProvider;
 import lombok.*;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -20,6 +21,8 @@ public class User extends BaseEntity {
     private String email;
 
     private String password;
+
+    private TokenProvider tokenProvider;
 
     @DBRef(lazy = true)
     private List<Role> roles = new ArrayList<>();
