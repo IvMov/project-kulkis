@@ -1,17 +1,17 @@
 package home.kulkis.userservice.controller;
 
+import home.kulkis.userservice.dto.user.*;
 import home.kulkis.userservice.entity.user.User;
+import home.kulkis.userservice.entity.user.UserDetails;
+import home.kulkis.userservice.mapper.user.UserDetailsMapper;
 import home.kulkis.userservice.mapper.user.UserMapper;
-import home.kulkis.userservice.model.user.UserCreateDto;
-import home.kulkis.userservice.model.user.UserOutDtoLite;
 import home.kulkis.userservice.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequiredArgsConstructor
@@ -32,15 +32,11 @@ public class UserController {
         return userMapper.toLiteDto(user);
     }
 
-    @GetMapping
-    public String check1123() {
-        User user = userService.getByLogin("login1");
-        String password = user.getPassword();
-        List<String> asd = new ArrayList<>();
-        return String.format("Password in database is %s, and it is equals or not to encoded one? %b",
-                password,
-                passwordEncoder.matches("password1", password));
-    }
+    @GetMapping("/{id}")
+    public UserOutDto getUser(@PathVariable UUID id) {
+        User user = userService.getById(id);
 
+        return userMapper.toDto(user);
+    }
 
 }

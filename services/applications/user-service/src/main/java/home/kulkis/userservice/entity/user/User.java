@@ -51,28 +51,4 @@ public class User extends BaseEntity {
 //    @DBRef(lazy = true)
 //    private List<Chat> chats = new ArrayList<>();
 
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
-    }
-
-    public void setCreatedDateTime(LocalDateTime createdDateTime) {
-        this.createdDateTime = createdDateTime;
-    }
-
-    public void setUserDetails(UserDetails userDetails) {
-        this.userDetails = userDetails;
-    }
 }

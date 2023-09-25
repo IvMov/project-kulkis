@@ -1,4 +1,4 @@
-package home.kulkis.userservice.model.user;
+package home.kulkis.userservice.dto.user;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
