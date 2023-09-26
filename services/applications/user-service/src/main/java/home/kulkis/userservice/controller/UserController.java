@@ -1,9 +1,9 @@
 package home.kulkis.userservice.controller;
 
-import home.kulkis.userservice.dto.user.*;
+import home.kulkis.userservice.dto.user.UserCreateDto;
+import home.kulkis.userservice.dto.user.UserOutDto;
+import home.kulkis.userservice.dto.user.UserOutDtoLite;
 import home.kulkis.userservice.entity.user.User;
-import home.kulkis.userservice.entity.user.UserDetails;
-import home.kulkis.userservice.mapper.user.UserDetailsMapper;
 import home.kulkis.userservice.mapper.user.UserMapper;
 import home.kulkis.userservice.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -16,6 +16,7 @@ import java.util.UUID;
 @RestController
 @RequiredArgsConstructor
 @Slf4j
+@CrossOrigin //cors configuration
 @RequestMapping("/users")
 public class UserController {
 
