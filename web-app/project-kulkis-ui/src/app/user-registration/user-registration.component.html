@@ -1,0 +1,26 @@
+<h1>Registration block</h1>
+<div>
+    <div class="local-registration">
+        <h3>Registration</h3>
+        <div>
+            <label for="name">Username: </label>
+            <input id="name" [(ngModel)]="newUser.login" placeholder="zai1">
+        </div>
+        <div>
+            <label for="name">Email: </label>
+            <input id="name" [(ngModel)]="newUser.email" placeholder="zai@gmail.com">
+        </div>
+        <div>
+            <label for="name">Password: </label>
+            <input id="name" [(ngModel)]="newUser.password" placeholder="pAs$w0rd">
+        </div>
+        <button (click)="createNewUser()">Register me</button>
+    </div>
+    <div class="google-registration">
+        <h3>Registration with google</h3>
+        <a href="http://localhost:8701/oauth2/authorization/google">Use google account for registration</a>
+    </div>
+</div>
+<div *ngIf="result">
+    Registered successfully. id: {{result.id}}
+</div>
