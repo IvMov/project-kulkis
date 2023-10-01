@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    UserRegistrationComponent
+    UserRegistrationComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

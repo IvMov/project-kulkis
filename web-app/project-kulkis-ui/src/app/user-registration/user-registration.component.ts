@@ -13,7 +13,7 @@ export class UserRegistrationComponent {
 constructor(private userService: UserService){}
 
   newUser: UserCreate = {
-    login: "",
+    login: "anIdiot",
     email: "",
     password: ""
   };
